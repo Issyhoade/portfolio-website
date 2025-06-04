@@ -1,0 +1,334 @@
+/* colors used 
+#d9e4ec - Blue Gray as background
+#b7cfdc - Misty Blue
+#385e72 - Misty Blue Dark as text color
+#ffffff - White as button background
+#073147 - Dark Blue as text color
+#2b2b2b - Dark Gray as secondary button text color
+#778aa7 - Light Blue as button hover background
+ */
+
+ .navigation-list_item {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5em 0;
+  transition: color 0.3s ease;
+}
+
+/* Top line */
+.navigation-list_item::before,
+.navigation-list_item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #161a28;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Position top and bottom lines */
+.navigation-list_item::before {
+  top: 0;
+  transform-origin: left;
+}
+.navigation-list_item::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+/* Hover state - animate both lines */
+.navigation-list_item:hover::before,
+.navigation-list_item:hover::after {
+  transform: scaleX(1);
+}
+
+/* Optional text color change on hover */
+.navigation-list_item:hover {
+  color: #577bde;
+}
+
+body {
+  background-color: #f6f8fa;
+  color: #073147;
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h4 {
+  font-family: "Chivo", sans-serif;
+  font-size: medium;
+  font-weight: 200;
+  font-style: italic;
+  color: #073147;
+}
+
+a {
+  color: 073147;
+  /* link color */
+}
+
+a:visited {
+  /* visited link */
+  color: 073147;
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: #073147;
+}
+
+button, .button {
+  font-family: "Chivo", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #ffffff;
+  background-color: rgb(15, 78, 99);
+  border-radius: 1000px;
+  padding: 10px 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+button:hover, .button:hover {
+  background-color: #778aa7;
+  color: rgb(2, 52, 69);
+  cursor: pointer;
+  opacity: 0.8;
+}
+button:focus, .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #385e72;
+}
+button:active {
+  background-color: #ffffff;
+  color: rgb(2, 52, 69);
+}
+
+.button__secondary {
+  background-color: #b7f6e7;
+  color: #2b2b2b;
+  cursor: pointer;
+  opacity: 0.8;
+
+}
+
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #525d5b;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+ul {
+  list-style:none;
+}
+
+header {
+    margin: 0 auto; 
+    max-width: fit-content;
+    
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Add a class for the footer */
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: #d7d7d7 solid 5px;
+}
+
+.page-header {
+  display: fixed;
+  border-top-right-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  margin-right: 60px;;
+  border-bottom: 5px solid #d7d7d7;
+  font-weight: 250;
+}
+
+.page-header img {
+    width: 200px;
+}
+
+.page-header_item {
+    flex: 0 1 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; 
+    text-align: center; 
+}
+
+.page-header_item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+h2 {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#grid__item {
+    background-color: lightgray;
+    padding: auto;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: color-change 4s infinite alternate linear;
+
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+  .cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+ .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-row-end: auto;
+    padding: 20px;
+}
+
+
+
+h1 {
+    text-align: center
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
